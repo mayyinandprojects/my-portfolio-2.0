@@ -9,11 +9,11 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
 
         {/* Project Links */}
         <div className="text-md mb-6 space-x-2">
-          <a href="" className="bold-hover text-blue-400">
+          <a href="https://github.com/mayyinandprojects/myFlixAngular" className="bold-hover text-blue-400">
             Github
           </a>
           <span>|</span>
-          <a href="" className="bold-hover text-blue-400">
+          <a href="https://mayyinandprojects.github.io/myFlixAngular/" className="bold-hover text-blue-400">
             Live Link
           </a>
         </div>
