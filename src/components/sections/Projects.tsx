@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ProjectCard from '../ProjectCard';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -24,7 +24,6 @@ const Projects: React.FC = () => {
       techStack: ['React Native', 'Firebase', 'Expo', 'Gifted Chat'],
       links: [
         { name: 'Github↗', url: 'https://github.com/mayyinandprojects/Chat-App' },
-        { name: 'Case Study↗', url: 'https://example.com/casestudy' },
       ],
     },
     {
