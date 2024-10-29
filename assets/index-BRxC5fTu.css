@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;html{scroll-behavior:smooth}@layer base{body{@apply font-sans;}}.bold-hover:hover{font-weight:700;text-decoration:underline}
