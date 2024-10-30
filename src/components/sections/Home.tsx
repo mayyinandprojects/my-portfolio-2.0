@@ -31,7 +31,7 @@ const Home: React.FC = () => {
     className="absolute bottom-4 transform -translate-x-1/2 flex justify-center items-center animate-bounce-custom"
   >
     <img
-      src="src/assets/arrowDownIcon_home.svg"
+      src="./src/assets/arrowDownIcon_home.svg"
       alt="Scroll to Projects"
       className="h-5 w-5 text-white mb-3 transition-shadow duration-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
     />

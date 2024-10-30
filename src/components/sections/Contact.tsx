@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
           rel="noopener noreferrer"
           className="text-white hover:text-amber-300"
         >
-          <img src='src\assets\github-142-svgrepo-com.svg' alt="GitHub" className="h-6 w-6" />
+          <img src='./src/assets/github-142-svgrepo-com.svg' alt="GitHub" className="h-6 w-6" />
         </a>
 
         {/* LinkedIn Icon Link */}
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
           rel="noopener noreferrer"
           className="text-white hover:text-amber-300"
         >
-          <img src='src/assets/linkedin-161-svgrepo-com.svg' alt="LinkedIn" className="h-6 w-6 text-white" />
+          <img src='./src/assets/linkedin-161-svgrepo-com.svg' alt="LinkedIn" className="h-6 w-6 text-white" />
         </a>
       </div>
     </footer>

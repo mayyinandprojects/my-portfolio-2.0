@@ -30,7 +30,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
         </p>
 
         <img
-                  src="src\assets\casestudy_myflixdb_overview.png"
+                  src="./src/assets/casestudy_myflixdb_overview.png"
                   className="m-auto w-3-2 h-auto rounded mb-12"
                   alt="myFlixAngularoverview"
                 />
@@ -106,7 +106,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixdb_login.png"
+                  src="./src/assets/casestudy_myflixdb_login.png"
                   className="w-full h-auto rounded"
                   alt="User Registration and Login"
                 />
@@ -116,7 +116,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixAngular_movielist.png"
+                  src="./src/assets/casestudy_myflixAngular_movielist.png"
                   className="w-full h-auto rounded"
                   alt="Browse Different Movies"
                 />
@@ -126,7 +126,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src\assets\casestudy_myflixAngular_profile.png"
+                  src="./src/assets/casestudy_myflixAngular_profile.png"
                   className="w-full h-auto rounded"
                   alt="Manage User Profile"
                 />
@@ -138,7 +138,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="col-span-1 sm:col-span-2 bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixdb_moviedetails.png"
+                  src="./src/assets/casestudy_myflixdb_moviedetails.png"
                   className="w-full h-auto rounded"
                   alt="View Movie Details"
                 />
@@ -148,7 +148,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixAngular_favoritemovies.png"
+                  src="./src/assets/casestudy_myflixAngular_favoritemovies.png"
                   className="w-full h-auto rounded"
                   alt="Add/Remove Movies to/from Favorites"
                 />

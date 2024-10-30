@@ -68,7 +68,7 @@ const About: React.FC = () => {
           {/* Image Section */}
           <div className="mb-10 md:w-1/2 flex justify-center">
             <img
-              src="src/assets/IMG_about.jpg"
+              src="./src/assets/IMG_about.jpg"
               alt="About Me"
               className="object-cover h-72 w-72 rounded-lg shadow-md md:h-80 md:w-80"
             />

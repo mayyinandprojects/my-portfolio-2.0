@@ -4,15 +4,15 @@ import Carousel from "../Carousel";
 
 const Journey: React.FC = () => {
   const imageUrls = [
-    { url: "src/assets/1_journey.png", caption: "Teachers' ICT Workshop in school" },
-    { url: "src/assets/2_journey.png", caption: "We are in the Kuching Digital Maker Hub" },
-    { url: "src/assets/3_journey.png", caption: "Student showcasing their upcycled toy with Arduino" },
-    { url: "src/assets/4_journey.png", caption: "Student presenting their Scratch animated Science project" },
-    { url: "src/assets/5_journey.png", caption: "Representing Malaysia at Computer Science World in Asia 2019" },
-    { url: "src/assets/6_journey.png", caption: "University students sharing their ideas during a Design Thinking workshop" },
-    { url: "src/assets/7_journey.png", caption: "Discussion with my Study Buddy from Career Foundry Web Development Bootcamp" },    
-    { url: "src/assets/8_journey.jpg", caption: "My Color Mixer LED Project, proudly powered by Arduino" },
-    { url: "src/assets/9_journey.jpg", caption: "Photo from an evening stroll" },
+    { url: "./src/assets/1_journey.png", caption: "Teachers' ICT Workshop in school" },
+    { url: "./src/assets/2_journey.png", caption: "We are in the Kuching Digital Maker Hub" },
+    { url: "./src/assets/3_journey.png", caption: "Student showcasing their upcycled toy with Arduino" },
+    { url: "./src/assets/4_journey.png", caption: "Student presenting their Scratch animated Science project" },
+    { url: "./src/assets/5_journey.png", caption: "Representing Malaysia at Computer Science World in Asia 2019" },
+    { url: "./src/assets/6_journey.png", caption: "University students sharing their ideas during a Design Thinking workshop" },
+    { url: "./src/assets/7_journey.png", caption: "Discussion with my Study Buddy from Career Foundry Web Development Bootcamp" },    
+    { url: "./src/assets/8_journey.jpg", caption: "My Color Mixer LED Project, proudly powered by Arduino" },
+    { url: "./src/assets/9_journey.jpg", caption: "Photo from an evening stroll" },
   ];
 
   return (
