@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom"; // Import Link
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
@@ -28,12 +28,11 @@ const Navbar: React.FC = () => {
   }, []);
 
   const handleNavigation = (section: string) => {
-    // Close the sidebar when a link is clicked
     setIsSidebarOpen(false);
 
-    // If on a different page, navigate to the homepage first, then scroll
+    // Navigate to the homepage first if not on it
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to homepage
+      navigate("/");
     }
 
     // Scroll to the target section after ensuring we’re on the homepage
@@ -42,12 +41,11 @@ const Navbar: React.FC = () => {
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Slight delay to ensure DOM updates before scrolling
+    }, 100);
   };
 
   return (
     <>
-      {/* Toggle button for small screens */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-800 rounded-full text-white"
@@ -59,7 +57,6 @@ const Navbar: React.FC = () => {
         )}
       </button>
 
-      {/* Sidebar */}
       <aside
         className={`bg-black font-sans text-white w-80 p-6 h-full fixed top-0 left-0 z-40 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -93,7 +90,7 @@ const Navbar: React.FC = () => {
             </a>
             <span>|</span>
             <a
-              href="src/assets/MayYinLam_resume.pdf"
+              href="/MayYinLam_resume.pdf" // Adjusted path
               className="block hover:underline"
               target="_blank"
               rel="noopener noreferrer"
@@ -102,7 +99,7 @@ const Navbar: React.FC = () => {
             </a>
             <span>|</span>
             <a
-              href="src/assets/MayYinLam_lebenslauf.pdf"
+              href="/MayYinLam_lebenslauf.pdf" // Adjusted path
               className="block hover:underline"
               target="_blank"
               rel="noopener noreferrer"
@@ -129,7 +126,6 @@ const Navbar: React.FC = () => {
         </div>
       </aside>
 
-      {/* Overlay to close sidebar when clicked outside */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"

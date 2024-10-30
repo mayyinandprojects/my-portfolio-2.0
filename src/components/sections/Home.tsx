@@ -1,9 +1,15 @@
-// my-portfolio/src/components/sections/Home.tsx
 import React from "react";
-// Import the arrow down icon
 import arrowDownIcon from '/src/assets/arrowDownIcon_home.svg'; 
 
 const Home: React.FC = () => {
+
+  const handleScrollToProjects = () => {
+    const sectionElement = document.getElementById("projects");
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -27,17 +33,20 @@ const Home: React.FC = () => {
         </p>
       </div>
       {/* Arrow positioned at the bottom as a link with bounce animation and shadow on hover */}
-      <a
-        href="#projects"
+      <div
         id="next-section-arrow-container"
         className="absolute bottom-4 transform -translate-x-1/2 flex justify-center items-center animate-bounce-custom"
+        onClick={handleScrollToProjects} // Use the click handler
+        role="button" // Improve accessibility
+        tabIndex={0} // Allow keyboard navigation
+        onKeyPress={(e) => e.key === 'Enter' && handleScrollToProjects()} // Handle keyboard events
       >
         <img
           src={arrowDownIcon} // Use the imported image
           alt="Scroll to Projects"
           className="h-5 w-5 text-white mb-3 transition-shadow duration-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
         />
-      </a>
+      </div>
 
       {/* Custom bounce animation */}
       <style>{`
