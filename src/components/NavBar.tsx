@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -30,13 +31,18 @@ const Navbar: React.FC = () => {
     // Close the sidebar when a link is clicked
     setIsSidebarOpen(false);
 
-    // Use hash to navigate to the section
-    const sectionElement = document.getElementById(section);
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the section
-    } else {
-      navigate("/"); // Navigate to the main view if section not found
+    // If on a different page, navigate to the homepage first, then scroll
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to homepage
     }
+
+    // Scroll to the target section after ensuring we’re on the homepage
+    setTimeout(() => {
+      const sectionElement = document.getElementById(section);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Slight delay to ensure DOM updates before scrolling
   };
 
   return (
@@ -52,7 +58,7 @@ const Navbar: React.FC = () => {
           <Bars3Icon className="w-5 h-5" />
         )}
       </button>
-      
+
       {/* Sidebar */}
       <aside
         className={`bg-black font-sans text-white w-80 p-6 h-full fixed top-0 left-0 z-40 transform ${
@@ -106,21 +112,23 @@ const Navbar: React.FC = () => {
           </div>
 
           <nav className="space-y-4">
-            {["home", "projects", "about", "journey", "contact"].map((section) => (
-              <button
-                key={section}
-                className={`block text-lg hover:underline ${
-                  activeSection === section ? "text-amber-300 font-bold" : ""
-                }`}
-                onClick={() => handleNavigation(section)} // Call handleNavigation on click
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-            ))}
+            {["home", "projects", "about", "journey", "contact"].map(
+              (section) => (
+                <button
+                  key={section}
+                  onClick={() => handleNavigation(section)}
+                  className={`block text-lg hover:underline ${
+                    activeSection === section ? "text-amber-300 font-bold" : ""
+                  }`}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+              )
+            )}
           </nav>
         </div>
       </aside>
-      
+
       {/* Overlay to close sidebar when clicked outside */}
       {isSidebarOpen && (
         <div

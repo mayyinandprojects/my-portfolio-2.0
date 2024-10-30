@@ -7,8 +7,8 @@ import CaseStudyMyFlixDBAngular from './components/pages/CaseStudyMyFlixDBAngula
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="App">
+    
+      <Router basename="/my-portfolio-2.0"> {/* Check base set for GitHub Pages and vite.config.ts */}
         <Navbar />
         <Routes>
           {/* MainView as the home route */}
@@ -16,7 +16,7 @@ const App: React.FC = () => {
           {/* Case study page route */}
           <Route path="/casestudy-myflix-angular" element={<CaseStudyMyFlixDBAngular />} />
         </Routes>
-      </div>
+      
     </Router>
   );
 };

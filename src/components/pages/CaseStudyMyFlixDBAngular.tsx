@@ -1,6 +1,14 @@
 // src/pages/CaseStudyMyFlixDBAngular.tsx
 import React from "react";
 
+// Importing images
+import overviewImage from '/src/assets/casestudy_myflixdb_overview.png';
+import loginImage from '/src/assets/casestudy_myflixdb_login.png';
+import movieListImage from '/src/assets/casestudy_myflixAngular_movielist.png';
+import profileImage from '/src/assets/casestudy_myflixAngular_profile.png';
+import movieDetailsImage from '/src/assets/casestudy_myflixdb_moviedetails.png';
+import favoriteMoviesImage from '/src/assets/casestudy_myflixAngular_favoritemovies.png';
+
 const CaseStudyMyFlixDBAngular: React.FC = () => {
   return (
     <section className="min-h-screen py-12 px-6 bg-gray-700 text-white lg:ml-20 lg:pl-40 lg:pr-40 text-center">
@@ -9,11 +17,11 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
 
         {/* Project Links */}
         <div className="text-md mb-6 space-x-2">
-          <a href="" className="bold-hover text-blue-400">
+          <a href="https://github.com/mayyinandprojects/myFlixAngular" className="bold-hover text-blue-400" target="blank">
             Github
           </a>
           <span>|</span>
-          <a href="" className="bold-hover text-blue-400">
+          <a href="https://mayyinandprojects.github.io/myFlixAngular/" className="bold-hover text-blue-400" target="blank">
             Live Link
           </a>
         </div>
@@ -30,10 +38,10 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
         </p>
 
         <img
-                  src="src\assets\casestudy_myflixdb_overview.png"
-                  className="m-auto w-3-2 h-auto rounded mb-12"
-                  alt="myFlixAngularoverview"
-                />
+          src={overviewImage}
+          className="m-auto w-3/4 h-auto rounded mb-12"
+          alt="MyFlix Angular Overview"
+        />
 
         {/* Tech Stack */}
         <div className="mb-12">
@@ -98,7 +106,6 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
         </div>
 
         {/* Key Features */}
-        {/* w-full h-auto on each image to make sure it scales to the container width while maintaining its aspect ratio. */}
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Key Features</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,7 +113,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixdb_login.png"
+                  src={loginImage}
                   className="w-full h-auto rounded"
                   alt="User Registration and Login"
                 />
@@ -116,7 +123,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixAngular_movielist.png"
+                  src={movieListImage}
                   className="w-full h-auto rounded"
                   alt="Browse Different Movies"
                 />
@@ -126,7 +133,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src\assets\casestudy_myflixAngular_profile.png"
+                  src={profileImage}
                   className="w-full h-auto rounded"
                   alt="Manage User Profile"
                 />
@@ -138,7 +145,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="col-span-1 sm:col-span-2 bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixdb_moviedetails.png"
+                  src={movieDetailsImage}
                   className="w-full h-auto rounded"
                   alt="View Movie Details"
                 />
@@ -148,7 +155,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg text-center">
               <div className="w-full bg-gray-600 rounded mb-4">
                 <img
-                  src="src/assets/casestudy_myflixAngular_favoritemovies.png"
+                  src={favoriteMoviesImage}
                   className="w-full h-auto rounded"
                   alt="Add/Remove Movies to/from Favorites"
                 />
@@ -159,6 +166,7 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Development Stages */}
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Development Stages</h2>

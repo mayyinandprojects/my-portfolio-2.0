@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, te
         </div>
       </div>
       {/* Add white shadow on hover */}
-      <style jsx>{`
+      <style>{`
         .group:hover {
           box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
         }
