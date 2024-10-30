@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import { useNavigate, useLocation, Link } from "react-router-dom"; // Import Link
+import { useNavigate, useLocation } from "react-router-dom"; // Import Link
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
