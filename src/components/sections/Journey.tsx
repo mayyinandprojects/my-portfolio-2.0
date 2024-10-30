@@ -1,18 +1,28 @@
-// src\components\sections\Journey.tsx
+// src/components/sections/Journey.tsx
 import React from "react";
 import Carousel from "../Carousel";
+// Importing images
+import journeyImage1 from '/src/assets/1_journey.png';
+import journeyImage2 from '/src/assets/2_journey.png';
+import journeyImage3 from '/src/assets/3_journey.png';
+import journeyImage4 from '/src/assets/4_journey.png';
+import journeyImage5 from '/src/assets/5_journey.png';
+import journeyImage6 from '/src/assets/6_journey.png';
+import journeyImage7 from '/src/assets/7_journey.png';
+import journeyImage8 from '/src/assets/8_journey.jpg';
+import journeyImage9 from '/src/assets/9_journey.jpg';
 
 const Journey: React.FC = () => {
   const imageUrls = [
-    { url: "./src/assets/1_journey.png", caption: "Teachers' ICT Workshop in school" },
-    { url: "./src/assets/2_journey.png", caption: "We are in the Kuching Digital Maker Hub" },
-    { url: "./src/assets/3_journey.png", caption: "Student showcasing their upcycled toy with Arduino" },
-    { url: "./src/assets/4_journey.png", caption: "Student presenting their Scratch animated Science project" },
-    { url: "./src/assets/5_journey.png", caption: "Representing Malaysia at Computer Science World in Asia 2019" },
-    { url: "./src/assets/6_journey.png", caption: "University students sharing their ideas during a Design Thinking workshop" },
-    { url: "./src/assets/7_journey.png", caption: "Discussion with my Study Buddy from Career Foundry Web Development Bootcamp" },    
-    { url: "./src/assets/8_journey.jpg", caption: "My Color Mixer LED Project, proudly powered by Arduino" },
-    { url: "./src/assets/9_journey.jpg", caption: "Photo from an evening stroll" },
+    { url: journeyImage1, caption: "Teachers' ICT Workshop in school" },
+    { url: journeyImage2, caption: "We are in the Kuching Digital Maker Hub" },
+    { url: journeyImage3, caption: "Student showcasing their upcycled toy with Arduino" },
+    { url: journeyImage4, caption: "Student presenting their Scratch animated Science project" },
+    { url: journeyImage5, caption: "Representing Malaysia at Computer Science World in Asia 2019" },
+    { url: journeyImage6, caption: "University students sharing their ideas during a Design Thinking workshop" },
+    { url: journeyImage7, caption: "Discussion with my Study Buddy from Career Foundry Web Development Bootcamp" },    
+    { url: journeyImage8, caption: "My Color Mixer LED Project, proudly powered by Arduino" },
+    { url: journeyImage9, caption: "Photo from an evening stroll" },
   ];
 
   return (
@@ -68,7 +78,6 @@ const Journey: React.FC = () => {
       </p>
     </section>
   );
-  
 };
 
 export default Journey;

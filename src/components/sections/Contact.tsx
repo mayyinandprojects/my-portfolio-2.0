@@ -1,5 +1,9 @@
-// my-portfolio\src\components\sections\Contact.tsx
+// my-portfolio/src/components/sections/Contact.tsx
 import React from "react";
+
+// Import the social icons
+import githubIcon from '/src/assets/github-142-svgrepo-com.svg'; 
+import linkedinIcon from '/src/assets/linkedin-161-svgrepo-com.svg'; 
 
 const Contact: React.FC = () => {
   return (
@@ -87,32 +91,31 @@ const Contact: React.FC = () => {
           &copy;2024 May Yin. All rights reserved.
         </p>
       </div>
-      <footer className="flex flex-col items-center justify-center py-4 text-white mt-10">
-      
-      
-      {/* Flex container for social icons */}
-      <div className="flex space-x-4">
-        {/* GitHub Icon Link */}
-        <a
-          href="https://github.com/mayyinandprojects"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-amber-300"
-        >
-          <img src='./src/assets/github-142-svgrepo-com.svg' alt="GitHub" className="h-6 w-6" />
-        </a>
 
-        {/* LinkedIn Icon Link */}
-        <a
-          href="https://www.linkedin.com/in/may-yin-lam"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-amber-300"
-        >
-          <img src='./src/assets/linkedin-161-svgrepo-com.svg' alt="LinkedIn" className="h-6 w-6 text-white" />
-        </a>
-      </div>
-    </footer>
+      <footer className="flex flex-col items-center justify-center py-4 text-white mt-10">
+        {/* Flex container for social icons */}
+        <div className="flex space-x-4">
+          {/* GitHub Icon Link */}
+          <a
+            href="https://github.com/mayyinandprojects"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-amber-300"
+          >
+            <img src={githubIcon} alt="GitHub" className="h-6 w-6" />
+          </a>
+
+          {/* LinkedIn Icon Link */}
+          <a
+            href="https://www.linkedin.com/in/may-yin-lam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-amber-300"
+          >
+            <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6 text-white" />
+          </a>
+        </div>
+      </footer>
     </section>
   );
 };

@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
       links: [
         { name: 'Github↗', url: 'https://github.com/mayyinandprojects/myFlixAngular' },
         { name: 'Live Link↗', url: 'https://mayyinandprojects.github.io/myFlixAngular/' },
-        { name: 'Case Study↗', url: '/casestudy-myflix-angular' },
+        { name: 'Case Study↗', url: '/my-portfolio-2.0/casestudy-myflix-angular' },
       ],
     },
     {
