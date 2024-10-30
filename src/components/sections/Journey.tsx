@@ -13,6 +13,14 @@ import journeyImage8 from '/src/assets/8_journey.jpg';
 import journeyImage9 from '/src/assets/9_journey.jpg';
 
 const Journey: React.FC = () => {
+
+  const handleScrollToContact = () => {
+    const sectionElement = document.getElementById("contact");
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const imageUrls = [
     { url: journeyImage1, caption: "Teachers' ICT Workshop in school" },
     { url: journeyImage2, caption: "We are in the Kuching Digital Maker Hub" },
@@ -74,7 +82,7 @@ const Journey: React.FC = () => {
       <Carousel images={imageUrls} />
       <p className="text-lg mt-6 mb-4 text-center">
         Thanks for reading! If you'd like to connect or discuss web development,<br/>
-        <a href="#contact" className="text-blue-400 bold-hover"> don’t hesitate to drop me a message!</a>
+        <div onClick={handleScrollToContact} className="text-blue-400 bold-hover hover:cursor-pointer"> don’t hesitate to drop me a message!</div>
       </p>
     </section>
   );
