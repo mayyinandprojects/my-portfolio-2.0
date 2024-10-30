@@ -1,6 +1,9 @@
 import React from "react";
 import TechnologyCard from "../TechnologyCard";
 
+// Import the About Me image
+import aboutMeImage from "/src/assets/IMG_about.jpg"; 
+
 const About: React.FC = () => {
   const technologies = [
     {
@@ -41,7 +44,7 @@ const About: React.FC = () => {
     <>
       <section
         id="about"
-        className="min-h-screen py-12 px-6 bg-gray-700 text-white  lg:pl-80 lg:pr-40"
+        className="min-h-screen py-12 px-6 bg-gray-700 text-white lg:pl-80 lg:pr-40"
       >
         {/* Subsection: About - main */}
         <h2 className="text-4xl font-bold mb-10 text-center">About Me</h2>
@@ -68,7 +71,7 @@ const About: React.FC = () => {
           {/* Image Section */}
           <div className="mb-10 md:w-1/2 flex justify-center">
             <img
-              src="./src/assets/IMG_about.jpg"
+              src={aboutMeImage} // Use the imported image here
               alt="About Me"
               className="object-cover h-72 w-72 rounded-lg shadow-md md:h-80 md:w-80"
             />
@@ -77,9 +80,7 @@ const About: React.FC = () => {
 
         {/* Subsection: Experience */}
         <div id="experience" className="mb-10">
-          <h3 className="text-3xl font-semibold mb-3 text-center">
-            Experience
-          </h3>
+          <h3 className="text-3xl font-semibold mb-3 text-center">Experience</h3>
           <p className="text-lg mb-2">
             Here's an overview of my professional background and experience in
             web development.
@@ -132,7 +133,7 @@ const About: React.FC = () => {
         <h3 className="text-3xl font-semibold mb-5 text-center">
           Technologies Learned
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3  mb-10 lg:pr-16 lg:pl-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10 lg:pr-16 lg:pl-16">
           {technologies.map((technology, idx) => (
             <TechnologyCard
               key={idx}
@@ -142,7 +143,8 @@ const About: React.FC = () => {
           ))}
         </div>
         <div id="download-resume-container flex row">
-          {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-auto flex justify-center mb-3">
+          {/* 
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-auto flex justify-center mb-3">
             <svg
               className="fill-current w-4 h-4 mr-2 mt-1"
               xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +163,8 @@ const About: React.FC = () => {
               <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
             </svg>
             <span>Meinen Lebenslauf Herunterladen</span>
-          </button> */}
+          </button> 
+          */}
         </div>
       </section>
     </>
