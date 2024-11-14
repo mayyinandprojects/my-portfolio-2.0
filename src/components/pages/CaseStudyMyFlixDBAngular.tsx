@@ -11,7 +11,7 @@ import favoriteMoviesImage from '/src/assets/casestudy_myflixAngular_favoritemov
 
 const CaseStudyMyFlixDBAngular: React.FC = () => {
   return (
-    <section className="min-h-screen py-12 px-6 bg-gray-700 text-white lg:ml-20 lg:pl-40 lg:pr-40 text-center">
+    <section className="min-h-screen py-12 px-6 bg-gray-700 text-white lg:ml-80 lg:pl-40 lg:pr-40 text-center">
       <div className="container mx-auto max-w-6xl p-4">
         <h1 className="text-3xl font-bold mb-6">MyFlix Angular Case Study</h1>
 
