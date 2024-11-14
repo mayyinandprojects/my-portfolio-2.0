@@ -28,21 +28,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, te
         {/* Tech Stack Badges */}
         <div className="flex flex-wrap justify-center gap-2 mb-3">
           {techStack.map((tech, idx) => (
-            <span key={idx} className="bg-blue-500 text-xs font-semibold px-2 py-1 rounded-full">
+            <span key={idx} className="bg-blue-500 text-sm font-semibold px-2 py-1 rounded-lg">
               {tech}
             </span>
           ))}
         </div>
         
         {/* Project Links */}
-        <div className="text-center space-x-4 text-sm mt-2">
+        <div className="text-center space-x-4 text-s mt-2">
           {links.map((link, idx) => (
             <a
               key={idx}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
+              className="text-blue-400 bold-hover"
             >
               {link.name}
             </a>

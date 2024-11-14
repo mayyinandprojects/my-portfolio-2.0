@@ -89,8 +89,8 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-gray-800 text-white p-8">
       <h2 className="text-4xl font-bold mb-8 mt-20">My Projects</h2>
-      <p className="text-md">Check Out My Project Portfolio</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mt-10">
+      <p className="text-lg">Check Out My Project Portfolio</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mt-10 ">
         {projects.map((project, idx) => (
           <ProjectCard
             key={idx}
@@ -102,7 +102,7 @@ const Projects: React.FC = () => {
           />
         ))}
       </div>
-      <div id="projects-github-link-container" className="flex items-center text-blue-400 hover-bold hover:underline">
+      <div id="projects-github-link-container" className="flex items-center text-blue-400 bold-hover text-lg">
         <a href="https://github.com/mayyinandprojects/" target="_blank" rel="noopener noreferrer">Visit my Github Repository for more projects ↗</a>
       </div>
     </section>
