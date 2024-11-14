@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center bg-gray-900 text-white"
+      className="h-screen flex items-center justify-center bg-gray-900 text-white lg:p-10"
     >
       <div>
         <h1 className="text-5xl font-bold mb-4 relative">

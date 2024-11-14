@@ -36,7 +36,7 @@ const Journey: React.FC = () => {
   return (
     <section
       id="journey"
-      className="min-h-screen py-12 px-6 bg-[#3b3b3b] text-white lg:pl-80 lg:pr-40"
+      className="min-h-screen py-12 px-6 bg-[#3b3b3b] text-white   lg:pr-40 lg:p-10"
     >
       <div className="mb-20">
         <h3 className="text-4xl font-bold mb-10 text-white text-center">My Journey</h3>
