@@ -1,20 +1,22 @@
-// my-portfolio/src/components/sections/Contact.tsx
 import React from "react";
-
-// Import the social icons
-import githubIcon from '/src/assets/github-142-svgrepo-com.svg'; 
-import linkedinIcon from '/src/assets/linkedin-161-svgrepo-com.svg'; 
+import githubIcon from "/src/assets/github-142-svgrepo-com.svg";
+import linkedinIcon from "/src/assets/linkedin-161-svgrepo-com.svg";
 
 const Contact: React.FC = () => {
+  // Function to scroll back to the top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section
       id="contact"
-      className="flex flex-col items-center p-20 bg-gray-600 text-white"
+      className="flex flex-col p-5 items-center lg:p-20 bg-gray-800 text-white"
     >
       <div className="mb-8 text-center">
-        <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
+        <h2 className="text-4xl mt-20 font-bold mb-4">Contact Me</h2>
         <p className="text-lg">
-          Feel free to contact me - for work, collaborations or say hello.{" "}
+          <strong>Feel free to contact me</strong> - for work, collaborations or say hello.
         </p>
       </div>
 
@@ -87,14 +89,12 @@ const Contact: React.FC = () => {
             </button>
           </div>
         </form>
-        <p className="text-center text-gray-200 text-xs">
-          &copy;2024 May Yin. All rights reserved.
-        </p>
       </div>
 
-      <footer className="flex flex-col items-center justify-center py-4 text-white mt-10">
+      <footer className="flex flex-col items-center justify-center py-4 text-white">
+
         {/* Flex container for social icons */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 mb-10">
           {/* GitHub Icon Link */}
           <a
             href="https://github.com/mayyinandprojects"
@@ -102,7 +102,11 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-amber-300"
           >
-            <img src={githubIcon} alt="GitHub" className="h-6 w-6" />
+            <img
+              src={githubIcon}
+              alt="GitHub"
+              className="h-6 w-6 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] transition-shadow duration-300"
+            />
           </a>
 
           {/* LinkedIn Icon Link */}
@@ -112,9 +116,31 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-amber-300"
           >
-            <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6 text-white" />
+            <img
+              src={linkedinIcon}
+              alt="LinkedIn"
+              className="h-6 w-6 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] transition-shadow duration-300"
+            />
           </a>
         </div>
+        {/* Footer Text */}
+        <p className="text-center text-white text-s">
+          &copy;2024 May Yin. All rights reserved.
+        </p>
+        <p className="mt-4 text-center text-s">
+          This portfolio is designed and developed with <strong>React</strong> and <strong>Tailwind CSS</strong>,
+          built using <strong>Vite</strong>, and deployed on <strong>GitHub Pages</strong>.
+        </p>
+
+        {/* Scroll to Top Button */}
+        <p className="text-lg mt-6 mb-4 text-center">
+          <span
+            onClick={scrollToTop}
+            className="text-blue-400 bold-hover hover:cursor-pointer hover:text-blue-300 transition-colors duration-300"
+          >
+            Scroll to Top ↑
+          </span>
+        </p>
       </footer>
     </section>
   );
