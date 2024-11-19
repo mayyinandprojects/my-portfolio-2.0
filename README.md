@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# My Portfolio Website 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for my personal portfolio website, built to showcase my web development skills, projects, and professional background. This is my redesigned version from my previous [Portfolio](https://github.com/mayyinandprojects/portfolio-website) project. 
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a fully responsive, modern web application developed with a robust front-end stack. The portfolio highlights my experience as a Fullstack Developer, displays my completed projects, and provides ways to get in touch.
 
-## Expanding the ESLint configuration
+## Live Link
+[Portfolio Link](https://mayyinandprojects.github.io/my-portfolio-2.0/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Table of Contents
 
-- Configure the top-level `parserOptions` property like this:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Deployment](#deployment)
+- [Contact](#contact)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Interactive Home Page**: A welcoming overview with navigation links and a brief introduction.
+- **Projects Showcase**: A gallery of my notable web development projects with descriptions and links.
+- **Responsive Design**: Fully optimized for various screen sizes, from mobile to desktop.
+- **About Me Section**: Details my professional background, experience, and skills.
+- **Downloadable Resume**: Direct links to my resume and CV in PDF format.
+- **Contact Form**: Integrated contact form with Web3Forms for quick messaging.
+- **Scroll-to-Top Functionality**: Easy navigation back to the top of the page.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Technologies Used
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Frameworks/Libraries**: React, Tailwind CSS, TypeScript
+- **Build Tool**: Vite
+- **Deployment Platform**: GitHub Pages
+- **Form Handling**: Web3Forms
+
+## Installation
+
+To get a local copy up and running, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-portfolio.git`
+   ```
+
+2. **Navigate to the project directory**:
+  ```bash
+  cd your-portfolio
+  ```
+
+3. **Install dependencies:**:
+  ```bash
+  npm install
+  ```
+
+4. **Run the development server:**:
+  ```bash
+  npm run dev
+  ```
+## Usage
+
+Open your web browser and go to http://localhost:3000 or whichever is stated in the terminal to see the site in action. Modify any component or style to adapt the site to your preferences or needs.
+
+## Contact
+If you'd like to reach out, you can find me here:
+
+- LinkedIn: [May Yin Lam](https://www.linkedin.com/in/may-yin-lam/)
+- Portfolio: [Portfolio](https://mayyinandprojects.github.io/my-portfolio-2.0/)
+
+## License
+© [2024] [May Yin]. All rights reserved. This portfolio's code may be referenced for learning purposes under the MIT License, but duplication of its design, layout, or specific visual elements is prohibited without explicit permission.
