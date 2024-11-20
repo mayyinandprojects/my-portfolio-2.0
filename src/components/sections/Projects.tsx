@@ -4,6 +4,7 @@ import React from 'react';
 import ProjectCard from '../ProjectCard';
 
 // Importing images
+import portfolioImage2 from '/src/assets/myporfolio2_projects.png'; 
 import myFlixAngularImage from '/src/assets/myFlixAngular_projects.png'; 
 import chatAppImage from '/src/assets/chatapp_projects.png'; 
 import meetImage from '/src/assets/meet_projects.png'; 
@@ -14,6 +15,16 @@ import portfolioImage from '/src/assets/portfolio_projects.png';
 
 const Projects: React.FC = () => {
   const projects = [
+    {
+      image: portfolioImage2 ,
+      title: 'My Portfolio 2.0 - React, Tailwind CSS, Vite',
+      description: 'The current personal portfolio website you are viewing, built to showcase my web development skills, projects, and professional background. This is my redesigned version from my previous Portfolio project.',
+      techStack: ['React', 'Tailwind CSS', 'Typescript', 'Vite'],
+      links: [
+        { name: 'Github↗', url: 'https://github.com/mayyinandprojects/my-portfolio-2.0' },
+        { name: 'Live Link↗', url: 'https://mayyinandprojects.github.io/my-portfolio-2.0/' },
+      ],
+    },
     {
       image: myFlixAngularImage,
       title: 'MyFlix Angular',
