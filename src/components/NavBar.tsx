@@ -24,14 +24,14 @@ const Navbar: React.FC = () => {
           }
         });
       },
-      { root: null, rootMargin: "0px", threshold: 0.4 } 
-      //threshold 0.4 meaning observer triggers when 40% of content is shown
+      { root: null, rootMargin: "0px", threshold: 0.3 } 
+      //threshold 0.4 meaning observer triggers when 30% of content is intersected
     );
 
     sections.forEach((section) => observer.observe(section));
 
     return () => sections.forEach((section) => observer.unobserve(section));
-  }, []);
+  }, [location.pathname]); // Re-run observer on route change, due to usage of hash routing for gh-pages
 
   const handleNavigation = (section: string) => {
     setIsSidebarOpen(false);
@@ -115,20 +115,19 @@ const Navbar: React.FC = () => {
           </div>
 
           <nav className="space-y-4">
-            {["home", "projects", "about", "journey", "contact"].map(
-              (section) => (
-                <button
-                  key={section}
-                  onClick={() => handleNavigation(section)}
-                  className={`block text-lg hover:underline ${
-                    activeSection === section ? "text-amber-300 font-bold" : ""
-                  }`}
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
-              )
-            )}
-          </nav>
+  {["home", "projects", "about", "journey", "contact"].map((section) => (
+    <button
+      key={section}
+      onClick={() => handleNavigation(section)}
+      className={`block text-lg bold-hover hover:text-orange-200 
+        transition-transform duration-500 ease-in-out 
+        transform ${activeSection === section ? "text-amber-300 font-bold translate-x-2" : ""}`}
+    >
+      {section.charAt(0).toUpperCase() + section.slice(1)}
+    </button>
+  ))}
+</nav>
+
         </div>
       </aside>
 
