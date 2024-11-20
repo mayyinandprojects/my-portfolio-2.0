@@ -23,12 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-build/index.html
-
-build/assets/MayYinLam_Resume_FullstackDeveloper-By57fTUA.pdf
-
-build/assets/index-bsTsHK6y.css
-
-build/assets/index-vYpVEHJY.css
-
-build/assets/index-BnJ6ZZMe.js
+build/
