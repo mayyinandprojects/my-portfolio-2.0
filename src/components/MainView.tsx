@@ -7,7 +7,7 @@ import Journey from './sections/Journey';
 
 const MainView: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen lg:ml-64">
+    <div className="bg-gray-900 text-white min-h-screen lg:ml-80">
       {/* Render the sections */}
       <Home />
       <Projects />

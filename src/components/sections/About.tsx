@@ -1,13 +1,15 @@
 import React from "react";
 import TechnologyCard from "../TechnologyCard";
+import Resume from "/src/assets/MayYinLam_Resume_FullstackDeveloper.pdf";
+import Lebenslauf from "/src/assets/MayYinLam_Lebenslauf_FullstackWebentwicklerin.pdf";
 
 // Import the About Me image
-import aboutMeImage from "/src/assets/IMG_about.jpg"; 
+import aboutMeImage from "/src/assets/IMG_about.jpg";
 
 const About: React.FC = () => {
   const technologies = [
     {
-      title: "Programming/Markup Languages",
+      title: "Programming/ Markup Languages",
       techStack: ["HTML", "CSS", "JavaScript", "TypeScript"],
     },
     {
@@ -44,10 +46,10 @@ const About: React.FC = () => {
     <>
       <section
         id="about"
-        className="min-h-screen py-12 px-6 bg-gray-700 text-white lg:pl-80 lg:pr-40"
+        className="min-h-screen p-8 bg-gray-700 text-white lg:pl-40 lg:pr-40"
       >
         {/* Subsection: About - main */}
-        <h2 className="text-4xl font-bold mb-10 text-center">About Me</h2>
+        <h2 className="text-4xl font-bold mb-10 mt-20 text-center">About Me</h2>
         <div
           id="about-me-header"
           className="flex flex-col md:flex-row items-center md:space-x-10"
@@ -80,7 +82,9 @@ const About: React.FC = () => {
 
         {/* Subsection: Experience */}
         <div id="experience" className="mb-10">
-          <h3 className="text-3xl font-semibold mb-3 text-center">Experience</h3>
+          <h3 className="text-3xl font-semibold mb-3 text-center">
+            Experience
+          </h3>
           <p className="text-lg mb-2">
             Here's an overview of my professional background and experience in
             web development.
@@ -133,17 +137,45 @@ const About: React.FC = () => {
         <h3 className="text-3xl font-semibold mb-5 text-center">
           Technologies Learned
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10 lg:pr-16 lg:pl-16">
+        <div className="flex flex-wrap justify-center custombreakpoint-about-techstack:grid-cols-3 md:grid-cols-3 sm:grid  gap-8 mb-10 mt-10 ">
+          {/* w-full added below to ensure full width even on smaller screens*/}
           {technologies.map((technology, idx) => (
-            <TechnologyCard
+            <div
               key={idx}
-              title={technology.title}
-              techStack={technology.techStack}
-            />
+              className="flex justify-center w-full"
+            >
+              <TechnologyCard
+                key={idx}
+                title={technology.title}
+                techStack={technology.techStack}
+              />
+            </div>
           ))}
         </div>
-        <div id="download-resume-container flex row">
-          {/* 
+        <div
+          id="download-resume-container"
+          className="flex flex-col justify-center text-center"
+        >
+          <a
+            href={Resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 text-xl bold-hover hover:cursor-pointer hover:text-blue-300 transition-colors duration-300"
+          >
+            Download my CV↗
+          </a>
+          <p>or</p>
+          <a
+            href={Lebenslauf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 text-xl bold-hover hover:cursor-pointer hover:text-blue-300 transition-colors duration-300"
+          >
+            Meinen Lebenslauf Herunterladen↗
+          </a>
+        </div>
+
+        {/* 
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-auto flex justify-center mb-3">
             <svg
               className="fill-current w-4 h-4 mr-2 mt-1"
@@ -165,7 +197,6 @@ const About: React.FC = () => {
             <span>Meinen Lebenslauf Herunterladen</span>
           </button> 
           */}
-        </div>
       </section>
     </>
   );

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import { useNavigate, useLocation } from "react-router-dom"; // Import Link
+import { useNavigate, useLocation } from "react-router-dom";
+import Resume from "/src/assets/MayYinLam_Resume_FullstackDeveloper.pdf";
+import Lebenslauf from "/src/assets/MayYinLam_Lebenslauf_FullstackWebentwicklerin.pdf";
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
@@ -11,21 +13,25 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
+    //IntersectionObserver is the API used for detecting when a user scrolls to a particular section
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          // use the following if debugging needed for the intersection observer
+          // console.log(entry.target.id, entry.isIntersecting);
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
         });
       },
-      { root: null, rootMargin: "0px", threshold: 0.6 }
+      { root: null, rootMargin: "0px", threshold: 0.3 } 
+      //threshold 0.4 meaning observer triggers when 30% of content is intersected
     );
 
     sections.forEach((section) => observer.observe(section));
 
     return () => sections.forEach((section) => observer.unobserve(section));
-  }, []);
+  }, [location.pathname]); // Re-run observer on route change, due to usage of hash routing for gh-pages
 
   const handleNavigation = (section: string) => {
     setIsSidebarOpen(false);
@@ -73,7 +79,7 @@ const Navbar: React.FC = () => {
           <div className="flex space-x-1 text-sm mb-8">
             <a
               href="https://github.com/mayyinandprojects/"
-              className="block hover:underline"
+              className="bold-hover"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -82,7 +88,7 @@ const Navbar: React.FC = () => {
             <span>|</span>
             <a
               href="https://www.linkedin.com/in/may-yin-lam/"
-              className="block hover:underline"
+              className=" bold-hover"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -90,8 +96,8 @@ const Navbar: React.FC = () => {
             </a>
             <span>|</span>
             <a
-              href="/MayYinLam_resume.pdf" // Adjusted path
-              className="block hover:underline"
+              href={Resume}
+              className="bold-hover"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,8 +105,8 @@ const Navbar: React.FC = () => {
             </a>
             <span>|</span>
             <a
-              href="/MayYinLam_lebenslauf.pdf" // Adjusted path
-              className="block hover:underline"
+              href={Lebenslauf}
+              className="bold-hover"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -109,20 +115,19 @@ const Navbar: React.FC = () => {
           </div>
 
           <nav className="space-y-4">
-            {["home", "projects", "about", "journey", "contact"].map(
-              (section) => (
-                <button
-                  key={section}
-                  onClick={() => handleNavigation(section)}
-                  className={`block text-lg hover:underline ${
-                    activeSection === section ? "text-amber-300 font-bold" : ""
-                  }`}
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
-              )
-            )}
-          </nav>
+  {["home", "projects", "about", "journey", "contact"].map((section) => (
+    <button
+      key={section}
+      onClick={() => handleNavigation(section)}
+      className={`block text-lg bold-hover hover:text-orange-200 
+        transition-transform duration-500 ease-in-out 
+        transform ${activeSection === section ? "text-amber-300 font-bold translate-x-2" : ""}`}
+    >
+      {section.charAt(0).toUpperCase() + section.slice(1)}
+    </button>
+  ))}
+</nav>
+
         </div>
       </aside>
 

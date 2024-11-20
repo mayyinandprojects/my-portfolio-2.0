@@ -2,26 +2,34 @@
 import React from "react";
 
 // Importing images
-import overviewImage from '/src/assets/casestudy_myflixdb_overview.png';
-import loginImage from '/src/assets/casestudy_myflixdb_login.png';
-import movieListImage from '/src/assets/casestudy_myflixAngular_movielist.png';
-import profileImage from '/src/assets/casestudy_myflixAngular_profile.png';
-import movieDetailsImage from '/src/assets/casestudy_myflixdb_moviedetails.png';
-import favoriteMoviesImage from '/src/assets/casestudy_myflixAngular_favoritemovies.png';
+import overviewImage from "/src/assets/casestudy_myflixdb_overview.png";
+import loginImage from "/src/assets/casestudy_myflixdb_login.png";
+import movieListImage from "/src/assets/casestudy_myflixAngular_movielist.png";
+import profileImage from "/src/assets/casestudy_myflixAngular_profile.png";
+import movieDetailsImage from "/src/assets/casestudy_myflixdb_moviedetails.png";
+import favoriteMoviesImage from "/src/assets/casestudy_myflixAngular_favoritemovies.png";
 
 const CaseStudyMyFlixDBAngular: React.FC = () => {
   return (
-    <section className="min-h-screen py-12 px-6 bg-gray-700 text-white lg:ml-20 lg:pl-40 lg:pr-40 text-center">
-      <div className="container mx-auto max-w-6xl p-4">
+    <>
+      <section className="bg-gray-900 py-6 px-6 text-white lg:ml-80 lg:pl-40 lg:pr-40 text-center">
         <h1 className="text-3xl font-bold mb-6">MyFlix Angular Case Study</h1>
 
         {/* Project Links */}
         <div className="text-md mb-6 space-x-2">
-          <a href="https://github.com/mayyinandprojects/myFlixAngular" className="bold-hover text-blue-400" target="blank">
+          <a
+            href="https://github.com/mayyinandprojects/myFlixAngular"
+            className="bold-hover text-blue-400"
+            target="blank"
+          >
             Github
           </a>
           <span>|</span>
-          <a href="https://mayyinandprojects.github.io/myFlixAngular/" className="bold-hover text-blue-400" target="blank">
+          <a
+            href="https://mayyinandprojects.github.io/myFlixAngular/"
+            className="bold-hover text-blue-400"
+            target="blank"
+          >
             Live Link
           </a>
         </div>
@@ -54,7 +62,9 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             <li>TypeDoc</li>
           </ul>
         </div>
+      </section>
 
+      <section className="bg-gray-800 py-6 px-6 text-white lg:ml-80 lg:pl-40 lg:pr-40 text-center">
         {/* Challenges */}
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Challenges</h2>
@@ -104,14 +114,16 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             transitions between views (movies, profile, etc.).
           </p>
         </div>
+        </section>
 
         {/* Key Features */}
+        <section className="bg-gray-700 py-6 px-6 text-white lg:ml-80 lg:pl-40 lg:pr-40 text-center">
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Key Features</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Row 1 */}
             <div className="bg-gray-800 p-4 rounded-lg text-center">
-              <div className="w-full bg-gray-600 rounded mb-4">
+              <div className="w-full bg-gray-800 rounded mb-4">
                 <img
                   src={loginImage}
                   className="w-full h-auto rounded"
@@ -166,7 +178,9 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
             </div>
           </div>
         </div>
+        </section>
 
+        <section className="bg-gray-600 py-6 px-6 text-white lg:ml-80 lg:pl-40 lg:pr-40 text-center">
         {/* Development Stages */}
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Development Stages</h2>
@@ -199,14 +213,14 @@ const CaseStudyMyFlixDBAngular: React.FC = () => {
         {/* Conclusion */}
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Conclusion</h2>
-          <p className="lg:text-lg md:text-md mb-4">
+          <p className="lg:text-lg md:text-md">
             The MyFlix Angular App successfully delivers a scalable and
             responsive movie database interface, ensuring a smooth user
             experience with robust authentication and seamless API integration.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

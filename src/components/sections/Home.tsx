@@ -1,8 +1,7 @@
 import React from "react";
-import arrowDownIcon from '/src/assets/arrowDownIcon_home.svg'; 
+import arrowDownIcon from "/src/assets/arrowDownIcon_home.svg";
 
 const Home: React.FC = () => {
-
   const handleScrollToProjects = () => {
     const sectionElement = document.getElementById("projects");
     if (sectionElement) {
@@ -13,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center bg-gray-900 text-white"
+      className="h-screen flex items-center justify-center bg-gray-900 text-white p-5 lg:p-10"
     >
       <div>
         <h1 className="text-5xl font-bold mb-4 relative">
@@ -23,11 +22,11 @@ const Home: React.FC = () => {
           </span>
         </h1>
 
-        <p className="text-lg">
+        <p className="text-xl">
           Hi! I am <strong>May Yin, FullStack Web Developer</strong> with a
           former background as a Digital Maker Hub Manager and STEM educator.
         </p>
-        <p className="text-lg">
+        <p className="text-xl">
           I enjoy{" "}
           <strong>crafting engaging, accessible web experiences.</strong>
         </p>
@@ -39,7 +38,7 @@ const Home: React.FC = () => {
         onClick={handleScrollToProjects} // Use the click handler
         role="button" // Improve accessibility
         tabIndex={0} // Allow keyboard navigation
-        onKeyPress={(e) => e.key === 'Enter' && handleScrollToProjects()} // Handle keyboard events
+        onKeyPress={(e) => e.key === "Enter" && handleScrollToProjects()} // Handle keyboard events
       >
         <img
           src={arrowDownIcon} // Use the imported image
