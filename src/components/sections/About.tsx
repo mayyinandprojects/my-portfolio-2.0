@@ -57,11 +57,12 @@ const About: React.FC = () => {
           {/* Text Section */}
           <div className="mb-10 md:w-1/2">
             <p className="text-lg mb-4">
-              I’m a <strong>Fullstack Web Developer</strong> with a background
-              in education and STEM program management. After more than five
-              years of using technology to inspire students and lead hands-on
-              learning experiences, I transitioned into web development to bring
-              my passion for problem-solving and creativity to the tech world.
+              I’m a <strong>Fullstack Web Developer</strong> based in{" "}
+              <strong>Oldenburg, Germany</strong> with a background in education
+              and STEM program management. After more than five years of using
+              technology to inspire students and lead hands-on learning
+              experiences, I transitioned into web development to bring my
+              passion for problem-solving and creativity to the tech world.
             </p>
             <p className="text-lg">
               I’m excited to combine my experience in education with my
@@ -91,7 +92,16 @@ const About: React.FC = () => {
           </p>
           <div id="experience-list-container" className="pl-10 pr-10 mt-5">
             <h4 className="text-xl font-semibold mb-2 text-yellow-400">
-              May - Nov 2024 - CareerFoundry Full-Stack Web Development Bootcamp{" "}
+              May - Nov 2024 -{" "}
+              <a
+                href="https://careerfoundry.com/"
+                className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+              >
+                CareerFoundry
+              </a>{" "}
+              Full-Stack Web Development Bootcamp
             </h4>
             <ul className="list-disc pl-5">
               <li className="mb-1 text-lg">
@@ -104,30 +114,99 @@ const About: React.FC = () => {
               </li>
             </ul>
             <h4 className="text-xl font-semibold mb-2 text-yellow-400">
-              2017 - 2021 Chumbaka Cyberjaya{" "}
+              2017 - 2023{" "}
+              <a
+                href="https://www.chumbaka.asia/"
+                className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+              >
+                Chumbaka
+              </a>
             </h4>
             <ul className="list-disc pl-5">
               <li className="mb-1 text-lg">
-                <strong>Role:</strong> Digital Maker Hub Manager{" "}
+                <strong>Role:</strong> Digital Maker Hub Manager
               </li>
               <li className="mb-1 text-lg">
-                Key Skills: Program development, stakeholder management, event
-                coordination, community building, STEM education,
-                technology-driven innovation
+                <strong>Key Skills:</strong> Program and curriculum development, stakeholder
+                management, event coordination, community building, STEM
+                education, technology-driven innovation
+              </li>
+              <li className="mb-1 text-lg">
+                <strong>Subjects taught:</strong> STEAM-based subjects based on various
+                open-source softwares such as {" "}
+                <a
+                  href="https://scratch.mit.edu/"
+                  className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+                >
+                  MIT Scratch
+                </a>
+                ,{" "}
+                <a
+                  href="https://appinventor.mit.edu/"
+                  className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+                >
+                  MIT App Inventor
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.chumbaka.asia/"
+                  className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+                >
+                  Arduino IDE
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.arduino.cc/en/software"
+                  className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+                >
+                  mBlock
+                </a>
+                , and{" "}
+                <a
+                  href="https://mblock.makeblock.com/en/"
+                  className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+                >
+                  Google Workspace
+                </a>
+                ; using projects-based learning and design thinking approach.
               </li>
             </ul>
 
             <h4 className="text-xl font-semibold mb-2 text-yellow-400">
-              2015 - 2016 Teach For Malaysia & SMK Pujut{" "}
+              2015 - 2016 -{"  "}
+              <a
+                href="https://teachformalaysia.org/"
+                className="underline hover:text-yellow-500 
+        transition-transform duration-500 ease-in-out 
+        transform"
+              >
+                Teach For Malaysia
+              </a>{" "}
+              & Pujut Secondary School
             </h4>
             <ul className="list-disc pl-5">
-              <li className="mb-1">
+              <li className="mb-1 text-lg">
                 <strong>Role:</strong> Teach for Malaysia Fellow/Public School
-                Teacher{" "}
+                Teacher
               </li>
-              <li className="mb-1">
+              <li className="mb-1 text-lg">
                 <strong>Key Skills:</strong> Communication, leadership,
                 classroom management, STEM coaching, student engagement
+              </li>
+              <li className="mb-1 text-lg">
+              <strong>Subjects taught:</strong>{" "}Geography, English, Moral Studies 
               </li>
             </ul>
           </div>
@@ -140,10 +219,7 @@ const About: React.FC = () => {
         <div className="flex flex-wrap justify-center custombreakpoint-about-techstack:grid-cols-3 md:grid-cols-3 sm:grid  gap-8 mb-10 mt-10 ">
           {/* w-full added below to ensure full width even on smaller screens*/}
           {technologies.map((technology, idx) => (
-            <div
-              key={idx}
-              className="flex justify-center w-full"
-            >
+            <div key={idx} className="flex justify-center w-full">
               <TechnologyCard
                 key={idx}
                 title={technology.title}
