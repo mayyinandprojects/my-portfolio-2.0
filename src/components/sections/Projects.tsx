@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
       image: pokedexImage,
       title: 'Pokédex App',
       description: 'This app is a simple Pokémon repository that displays a list of Pokémon from nine different generations fetched from the PokéAPI. It allows users to view Pokémon details in a modal, including their types, abilities, height, weight, and a Pokédex entry.',
-      techStack: ['React', 'Bootstrap', 'PokeAPI', 'Javascript'],
+      techStack: ['HTML', 'CSS', 'Bootstrap', 'Javascript', 'PokeAPI' ],
       links: [
         { name: 'Github↗', url: 'https://github.com/mayyinandprojects/Pokedex-App-with-Javascript' },
         { name: 'Live Link↗', url: 'https://mayyinandprojects.github.io/Pokedex-App-with-Javascript/' },
